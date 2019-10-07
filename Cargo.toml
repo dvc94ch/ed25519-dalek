@@ -20,12 +20,11 @@ version = "1"
 default-features = false
 
 [dependencies.rand_core]
-version = "0.3"
+version = "0.5"
 default-features = false
 
 [dependencies.rand]
-version = "0.6"
-features = ["i128_support"]
+version = "0.7"
 default-features = false
 optional = true
 
@@ -52,8 +51,7 @@ version = "0.2"
 hex = "^0.3"
 bincode = "^0.9"
 criterion = "0.2"
-rand = "0.6"
-rand_os = "0.1"
+rand = "0.7"
 
 [[bench]]
 name = "ed25519_benchmarks"
