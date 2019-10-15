@@ -18,6 +18,8 @@ travis-ci = { repository = "dalek-cryptography/ed25519-dalek", branch = "master"
 [dependencies.curve25519-dalek]
 version = "1"
 default-features = false
+git = "https://github.com/dvc94ch/curve25519-dalek"
+branch = "update-rand"
 
 [dependencies.rand_core]
 version = "0.5"
@@ -26,10 +28,6 @@ default-features = false
 [dependencies.rand]
 version = "0.7"
 default-features = false
-optional = true
-
-[dependencies.rand_os]
-version = "0.1"
 optional = true
 
 [dependencies.serde]
@@ -62,8 +60,8 @@ harness = false
 
 [features]
 default = ["std", "u64_backend"]
-std = ["curve25519-dalek/std", "rand_os", "sha2/std"]
-alloc = ["curve25519-dalek/alloc", "rand_os"]
+std = ["curve25519-dalek/std", "sha2/std"]
+alloc = ["curve25519-dalek/alloc"]
 nightly = ["curve25519-dalek/nightly", "clear_on_drop/nightly"]
 batch = ["rand"]
 asm = ["sha2/asm"]
